@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Lenguaje de Señas - Proyecto</title>
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/responsive.css">
+   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <style>
+      body {
+         font-family: 'Arial', sans-serif;
+         background-color: #f4f4f9;
+      }
+      .header {
+         background-color: #007bff;
+         padding: 20px 0;
+         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .logo_section .logo img {
+         width: 150px;
+      }
+      nav .navbar-nav .nav-link {
+         color: white;
+         font-size: 16px;
+         text-transform: uppercase;
+         margin: 0 10px;
+      }
+      .nav-link:hover {
+         color: #f4f4f9;
+         text-decoration: underline;
+      }
+      .banner_main {
+         background: url('images/banner.jpg') no-repeat center center;
+         background-size: cover;
+         color: white;
+         padding: 80px 0;
+      }
+      .banner_main h1 {
+         font-size: 48px;
+         font-weight: 700;
+      }
+      .banner_main p {
+         font-size: 18px;
+         margin-bottom: 20px;
+      }
+      .btn-primary {
+         background-color: #007bff;
+         border: none;
+         padding: 10px 30px;
+         font-size: 16px;
+         border-radius: 25px;
+      }
+      .btn-primary:hover {
+         background-color: #0056b3;
+         text-decoration: none;
+      }
+      .about, .team {
+         padding: 60px 0;
+      }
+      .about_img img {
+         width: 100%;
+         border-radius: 10px;
+         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+      .team_member {
+         text-align: center;
+         margin-bottom: 30px;
+      }
+      .team_member img {
+         border-radius: 50%;
+         width: 150px;
+         height: 150px;
+         object-fit: cover;
+         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+         margin-bottom: 10px;
+      }
+      .team_member h3 {
+         font-size: 20px;
+         font-weight: 600;
+         margin-bottom: 5px;
+      }
+      .team_member p {
+         font-size: 14px;
+         color: #555;
+      }
+      footer {
+         background-color: #007bff;
+         color: white;
+         text-align: center;
+         padding: 20px 0;
+         margin-top: 40px;
+      }
+      footer p {
+         margin: 0;
+      }
+      .titlepage h3 {
+         font-size: 36px;
+         font-weight: 700;
+      }
+      .green {
+         color: green;
+      }
+      .black {
+         color: black;
+      }
+   </style>
+</head>
+<body class="main-layout">
+   <!-- Header -->
+   <header>
+      <div class="header">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="logo_section">
+                     <div class="logo">
+                        <a href="index.html">
+                           <img src="C:\Users\Aarón\OneDrive\Documentos\Analisis computacional\Proyecto_IN\Images\logo.jpg" alt="Logo del proyecto">
+                        </a>
+                     </div>
+                  </div>
+                  
+                  <style>
+                     .logo img {
+                        width: 150px; /* Ajusta el tamaño según sea necesario */
+                        height: 150px; /* Mantén la misma altura que el ancho para que sea circular */
+                        border-radius: 50%;
+                        object-fit: cover; /* Asegura que la imagen se recorte correctamente */
+                     }
+                  </style>                  
+               </div>
+               <div class="col-md-10 offset-md-1">
+                  <nav class="navigation navbar navbar-expand-md navbar-dark">
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                           <li class="nav-item active">
+                              <a class="nav-link" href="#about">Sobre el Proyecto</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#team">El Equipo</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="tel:+51962375877">Contacto</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="C:\Users\Aarón\Downloads\Proyecto_IN.html">Pruebame</a>
+                           </li>                           
+                        </ul>
+                     </div>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!-- Banner -->
+   <section class="banner_main">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-7">
+               <h1>Reconocimiento del Lenguaje de Señas</h1>
+               <p style="color: black;">Un proyecto innovador de machine learning que permite reconocer el lenguaje de señas por letras a través de imágenes o la cámara en tiempo real.</p>
+               <a class="btn btn-primary" href="#about">Más Información</a>
+            </div>
+            <div class="col-md-5">
+               <img src="C:\Users\Aarón\OneDrive\Documentos\Analisis computacional\Proyecto_IN\Images\BANNER_-_ILSP-2.png" alt="Ilustración del proyecto" class="img-fluid">
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- About -->
+   <div id="about" class="about">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-5">
+               <div class="titlepage">
+                  <h2>Sobre <span class="green">Nuestro Proyecto</span></h2>
+                  <p>Este proyecto busca facilitar la comunicación y aprendizaje del lenguaje de señas utilizando tecnologías de inteligencia artificial y machine learning. Ofrecemos una herramienta que permite identificar letras en señas mediante imágenes o detección en tiempo real con una cámara.</p>
+                  <h3><span class="black">Nuestro</span> <span class="green">objetivo</span> <span class="black">como</span> <span class="green">equipo</span></h3>
+                  <p><strong>Nuestro principal objetivo es utilizar nuestra tecnología para ayudar a las empresas a fomentar la inclusión y sensibilidad hacia las personas con discapacidad.</strong></p>
+               </div>
+            </div>
+            <div class="col-md-7">
+               <div class="about_img">
+                  <figure><img src="C:\Users\Aarón\OneDrive\Documentos\Analisis computacional\Proyecto_IN\Images\lenguaseñas.jpeg" alt="Representación del proyecto"></figure>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Team -->
+   <div id="team" class="team">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="titlepage">
+                  <h2>Conoce al <span class="green">Equipo</span></h2>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-3">
+               <div class="team_member">
+                  <img src="C:\Users\Aarón\OneDrive\Documentos\Analisis computacional\Proyecto_IN\Images\HUGO.jpg" alt="Hugo Quispe" class="img-fluid">
+                  <h3>Hugo Quispe</h3>
+                  <p>Desarrollador Backend</p>
+               </div>
+            </div>
+            <div class="col-md-3">
+               <div class="team_member">
+                  <img src="C:\Users\Aarón\OneDrive\Documentos\Analisis computacional\Proyecto_IN\Images\CHIQUITO.jpg" alt="Romario Vega" class="img-fluid">
+                  <h3>Romario Vega</h3>
+                  <p>Especialista en Machine Learning</p>
+               </div>
+            </div>
+            <div class="col-md-3">
+               <div class="team_member">
+                  <img src="C:\Users\Aarón\OneDrive\Documentos\Analisis computacional\Proyecto_IN\Images\DIEGO S.jpg" alt="Diego Sandoval" class="img-fluid">
+                  <h3>Diego Sandoval</h3>
+                  <p>Ingeniero Frontend</p>
+               </div>
+            </div>
+            <div class="col-md-3">
+               <div class="team_member">
+                  <img src="C:\Users\Aarón\OneDrive\Documentos\Analisis computacional\Proyecto_IN\Images\CV_photo.jpeg" alt="Álvaro Herrera" class="img-fluid">
+                  <h3>Álvaro Herrera</h3>
+                  <p>Gestión de Proyecto</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Footer -->
+   <footer>
+      <div class="container">
+         <p>© 2024 Proyecto de Lenguaje de Señas. Todos los derechos reservados

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconocimiento de Lenguaje de Señas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #0078d7;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        .upload-box, .camera-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .upload-box {
+            border: 2px dashed #0078d7;
+            padding: 20px;
+            background-color: #fff;
+        }
+        .upload-box input[type="file"] {
+            display: none;
+        }
+        .upload-box label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0078d7;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        video {
+            width: 100%;
+            max-width: 600px;
+            border: 2px solid #0078d7;
+            border-radius: 10px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Reconocimiento de Lenguaje de Señas</h1>
+        <p>Identifica letras del lenguaje de señas mediante imágenes o en tiempo real con la cámara.</p>
+    </header>
+    <main>
+        <section id="subir-imagen">
+            <h2>Subir Imagen</h2>
+            <div class="upload-box">
+                <input type="file" id="imagen" accept="image/*">
+                <label for="imagen">Seleccionar Imagen</label>
+                <p>Sube una imagen del lenguaje de señas para analizar.</p>
+            </div>
+            <div class="result" id="resultado-imagen">
+                <p>El resultado de la imagen aparecerá aquí.</p>
+            </div>
+        </section>
+        <section id="camara">
+            <h2>Detección en Tiempo Real</h2>
+            <div class="camera-container">
+                <video id="video" autoplay muted></video>
+                <div class="result" id="resultado-camara">
+                    <p>La letra detectada en tiempo real aparecerá aquí.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 Álvaro Herrera. Todos los derechos reservados.
+    </footer>
+
+    <script>
+        // Función para detectar en imágenes subidas
+        const inputImagen = document.getElementById('imagen');
+        const resultadoImagen = document.getElementById('resultado-imagen');
+
+        inputImagen.addEventListener('change', () => {
+            const file = inputImagen.files[0];
+            if (file) {
+                resultadoImagen.innerHTML = `<p>Procesando imagen: ${file.name}...</p>`;
+                // Aquí puedes integrar el modelo de machine learning para procesar la imagen
+                setTimeout(() => {
+                    resultadoImagen.innerHTML = `<p>Letra detectada en la imagen: <strong>A</strong> (ejemplo)</p>`;
+                }, 2000);
+            }
+        });
+
+        // Función para encender la cámara
+        const video = document.getElementById('video');
+        const resultadoCamara = document.getElementById('resultado-camara');
+
+        async function startCamera() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                video.srcObject = stream;
+            } catch (error) {
+                resultadoCamara.innerHTML = '<p style="color: red;">Error: No se pudo acceder a la cámara.</p>';
+                console.error('Error al acceder a la cámara:', error);
+            }
+        }
+
+        // Simulación de detección en tiempo real con la cámara
+        function detectSignRealtime() {
+            setInterval(() => {
+                // Simulación de detección (puedes integrar tu modelo aquí)
+                const simulatedLetter = ['A', 'B', 'C', 'D'][Math.floor(Math.random() * 4)];
+                resultadoCamara.innerHTML = `<p>Letra detectada en tiempo real: <strong>${simulatedLetter}</strong></p>`;
+            }, 2000); // Cambia cada 2 segundos
+        }
+
+        // Iniciar cámara y detección en tiempo real
+        window.onload = () => {
+            startCamera();
+            detectSignRealtime();
+        };
+    </script>
+</body>
+</html>
